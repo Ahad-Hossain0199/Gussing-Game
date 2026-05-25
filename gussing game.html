@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>2 Player Guessing Game</title>
+
+  <link rel="stylesheet" href="gussing.css">
+</head>
+
+<body>
+
+  <!-- Player 1 Screen -->
+
+  <div class="screen active" id="player1Screen">
+
+    <div class="box">
+
+      <h1>🎮 Player 1</h1>
+
+      <input
+        type="text"
+        id="player1Name"
+        placeholder="Enter Your Name"
+      >
+
+      <input
+        type="password"
+        id="player1Number"
+        placeholder="Enter Secret Number"
+      >
+
+      <button onclick="goToPlayer2()">
+        Next
+      </button>
+
+    </div>
+
+  </div>
+
+  <!-- Player 2 Screen -->
+
+  <div class="screen" id="player2Screen">
+
+    <div class="box">
+
+      <h1>🎯 Player 2</h1>
+
+      <h3 id="attemptText">
+        Attempts Left : 5
+      </h3>
+
+      <input
+        type="text"
+        id="player2Name"
+        placeholder="Enter Your Name"
+      >
+
+      <input
+        type="number"
+        id="player2Guess"
+        placeholder="Guess The Number"
+      >
+
+      <button onclick="checkWinner()">
+        Check Winner
+      </button>
+
+      <h3 id="message"></h3>
+
+    </div>
+
+  </div>
+
+  <!-- Result Popup -->
+
+  <div class="winner-popup" id="winnerPopup">
+
+    <div class="popup-content">
+
+      <img
+        id="resultGif"
+        src=""
+        alt="gif"
+      >
+
+      <h1 id="winnerText"></h1>
+
+      <button onclick="playAgain()">
+        Play Again
+      </button>
+
+    </div>
+
+  </div>
+
+  <script src="game.js"></script>
+
+</body>
+</html>
